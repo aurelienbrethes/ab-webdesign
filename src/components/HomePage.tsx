@@ -1,28 +1,33 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Router from 'next/router'
 import { MutableRefObject, useEffect, useRef, useState } from 'react'
 import spaceShipImage from '../../public/assets/spaceShip.png'
 
 const titles = [
   {
-    label: 'titre 1',
+    label: 'Services',
     height: 'translate-y-40',
     index: 1,
+    path: '/services',
   },
   {
-    label: 'titre 2',
+    label: 'Accompagnement',
     height: 'translate-y-20',
     index: 2,
+    path: '/support',
   },
   {
-    label: 'titre 3',
+    label: 'A propos',
     height: 'translate-y-72',
     index: 3,
+    path: '/about',
   },
   {
-    label: 'titre 4',
+    label: 'Voir des projets',
     height: 'translate-y-20',
     index: 4,
+    path: '/projects',
   },
 ]
 
@@ -47,8 +52,11 @@ const HomePage = () => {
     spaceShip && heightCalcul(spaceShip)
   }, [])
 
-  const handleClickSpaceShip = () => {
+  const handleClickSpaceShip = (path: string) => {
     setShoot(true)
+    setTimeout(() => {
+      Router.push(path)
+    }, 200)
   }
 
   // Get the mouse current position
@@ -78,13 +86,13 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col h-full ">
-      <div className="flex justify-around w-full">
+      <div className="flex justify-around w-full mt-20">
         {titles.map((title) => (
           <button
             type="button"
             key={title.index}
             className={`z-50 ${title.height} cursor-pointer`}
-            onClick={() => handleClickSpaceShip()}
+            onClick={() => handleClickSpaceShip(title.path)}
           >
             {title.label}
           </button>
@@ -117,13 +125,6 @@ const HomePage = () => {
           />
         </motion.div>
       </div>
-      <button
-        type="button"
-        className="z-50 cursor-pointer"
-        onClick={() => setShoot(false)}
-      >
-        Reset
-      </button>
     </div>
   )
 }
