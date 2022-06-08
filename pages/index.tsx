@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             objectFit="contain"
             className="translate-y-40"
           />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </div>
