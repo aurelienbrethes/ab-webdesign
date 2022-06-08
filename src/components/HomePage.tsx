@@ -86,7 +86,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col h-full ">
-      <div className="flex justify-around w-full mt-20">
+      <div className="flex justify-around w-full mt-16">
         {titles.map((title) => (
           <button
             type="button"
