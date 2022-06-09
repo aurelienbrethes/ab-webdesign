@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import BackButton from '../src/components/BackButton'
 import Service from '../src/components/service'
+import H1Title from '../src/components/UI/H1Title'
 
 const services = [
   {
@@ -32,12 +33,15 @@ const services = [
 const Services: NextPage = () => {
   return (
     <div className="flex items-center w-screen h-screen ">
-      <h1 className="absolute align-middle top-7 right-8">Services</h1>
+      <H1Title title="Services" />
       <section className="flex justify-around w-full pt-32 h-5/6">
         {services.map((service) => (
-          <div key={service.id}>
-            <Service title={service.title} description={service.description} />
-          </div>
+          <Service
+            title={service.title}
+            description={service.description}
+            id={service.id}
+            key={service.id}
+          />
         ))}
       </section>
       <BackButton />

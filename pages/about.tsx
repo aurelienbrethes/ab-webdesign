@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import AboutCard from '../src/components/AboutCard'
 import BackButton from '../src/components/BackButton'
+import H1Title from '../src/components/UI/H1Title'
 
 const aboutArray = [
   {
@@ -18,6 +19,8 @@ const aboutArray = [
 const About: NextPage = () => {
   return (
     <div className="relative w-screen h-screen">
+      <H1Title title="A propos" />
+
       <BackButton />
       <section className="absolute top-20 bottom-20 right-40 left-40">
         <div className="relative w-full h-full ">
