@@ -17,8 +17,8 @@ const LeftArrow = ({sliderArrayLength} : IProps) => {
   };
 
   return (
-  <button type='button' className='relative w-20 h-full' onClick={() => handleChangeSlideBelow()}>
-    <Image src={leftArrow} alt="left arrow" layout='fill' objectFit='contain'  width={40} height={40} />
+  <button type='button' className='relative w-20 h-40 duration-300 hover:-translate-x-5' onClick={() => handleChangeSlideBelow()}>
+    <Image src={leftArrow} alt="left arrow" layout='fill' objectFit='contain'/>
   </button>
   )
 }

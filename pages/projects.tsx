@@ -10,7 +10,8 @@ const sliderArray = [
   {
     id: 1,
     title: 'Blocktech',
-    description: "Site e-commerce développé au sein de l'entreprise Digital Copilote afin d'acheter divers objets en crypto-monnaies",
+    description:
+      "Site e-commerce développé au sein de l'entreprise Digital Copilote afin d'acheter divers objets en crypto-monnaies",
     image: blocktech,
     altImage: 'Blocktech Logo',
     link: 'https://ninja-lab-crypto-hightech.vercel.app/',
@@ -26,19 +27,27 @@ const sliderArray = [
   {
     id: 3,
     title: 'Blind-Crash-Test',
-    description: 'Application de Blind-Test développée en groupe lors de ma formation à la wil code school de Biarritz',
+    description:
+      'Application de Blind-Test développée en groupe lors de ma formation à la wil code school de Biarritz',
     image: blindCrashTest,
     altImage: "l'application web Blind Crash Test",
     link: 'https://marie5060.github.io/Blind-Crash-Test/',
   },
 ]
 
+const ImageClassName = 'w-full h-1/2'
+const sliderWidth = 'w-[600px]'
+
 const Projects: NextPage = () => {
   return (
     <div className="z-40 flex items-center justify-center w-screen h-screen">
       <H1Title title="Projets" />
       <BackButton />
-      <Slider sliderArray={sliderArray} />
+      <Slider
+        ImageClassName={ImageClassName}
+        sliderWidth={sliderWidth}
+        sliderArray={sliderArray}
+      />
     </div>
   )
 }

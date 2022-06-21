@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image"
+import { StaticImageData } from 'next/image'
 
 export interface ISliderItem {
   id: number
@@ -6,5 +6,5 @@ export interface ISliderItem {
   description: string
   image: string | StaticImageData
   altImage: string
-  link: string
+  link?: string
 }

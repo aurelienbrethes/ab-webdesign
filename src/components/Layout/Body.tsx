@@ -9,13 +9,14 @@ interface IBody {
 
 const Body = ({ children }: IBody): JSX.Element => {
   return (
-    <div className="w-screen h-screen bg-gradient-to-tl from-zinc-700 to-zinc-900">
+    <div className="relative w-screen h-screen bg-gradient-to-tl from-zinc-700 to-zinc-900">
       <Image
         alt="clouds"
         src={cloudFooter}
         layout="fill"
         objectFit="contain"
         className="translate-y-40"
+        property='priority'
       />
       <Footer />
       {children}

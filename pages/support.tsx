@@ -1,97 +1,69 @@
 import { NextPage } from 'next'
 import BackButton from '../src/components/BackButton'
-import Image from 'next/image'
-import arrowBg from '../public/assets/arrowBg.png'
-import SupportCard from '../src/components/supportCard'
+import Slider from '../src/components/Slider'
 import H1Title from '../src/components/UI/H1Title'
+import talk from '../public/assets/talk.svg'
+import drawing from '../public/assets/drawing.svg'
+import development from '../public/assets/development.svg'
+import deploy from '../public/assets/deploy.svg'
+import monitoring from '../public/assets/monitoring.svg'
 
-const supportContent = [
+const supportArray = [
   {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: 'translate-x-[300px] ',
+    id: 1,
+    title: "Première étape : L'échange",
+    description:
+      "Prise de contact et échange d'informations nécessaires afin de structurer ensemble votre projet",
+    image: talk,
+    altImage: 'talking logo',
   },
   {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: 'translate-x-[600px] ',
+    id: 2,
+    title: 'Deuxième étape : la maquette',
+    description:
+      "Proposition d'une maquette complète correspondant à vos attentes. Celle-ci est modifiable à souhait jusqu'à ce qu'elle corresponde parfaitement à vos envies",
+    image: drawing,
+    altImage: 'drawing logo',
   },
   {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: ' translate-x-[900px]',
+    id: 3,
+    title: 'Troisième étape : La phase de développement',
+    description:
+      "Suivant l'ampleur du projet, nous fixons ensemble des rendez-vous intermédiaires pour suivre l'avancé du projet et être sûr qu'il corresponde toujours à vos attentes",
+    image: development,
+    altImage: 'development logo',
   },
   {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: 'translate-x-[1200px]',
+    id: 4,
+    title: 'Quatrième étape : Le déploiement',
+    description:
+      'Une fois le projet entièrement développé et fonctionnel, il est déployé sur le nom de domaine de votre choix.',
+    image: deploy,
+    altImage: 'rocket logo',
   },
   {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: ' translate-x-[1500px]',
-  },
-  {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: 'translate-x-[1800px]',
-  },
-  {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: ' translate-x-[2100px]',
-  },
-  {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: 'translate-x-[2400px]',
-  },
-  {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: ' translate-x-[2700px]',
-  },
-  {
-    title: 'Title',
-    content:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    supportClass: '3000',
+    id: 5,
+    title: 'Cinquième étape : Le suivi !',
+    description:
+      "La création d'un site internet à toujours un but précis. Il est donc important de suivre l'évolution de celui-ci, que ce soit dans ses performances ou sa prise en main, afin d'améliorer certains aspects ou simplement s'assurer qu'il réponde bien à votre besoin.",
+    image: monitoring,
+    altImage: 'monitoring logo',
   },
 ]
 
+const ImageClassName = 'w-1/2 h-1/4'
+const sliderWidth = 'w-[400px]'
+
 const Support: NextPage = () => {
   return (
-    <div className="flex items-center w-screen h-screen">
+    <div className="z-40 flex items-center justify-center w-screen h-screen">
       <H1Title title="Accompagnement" />
       <BackButton />
-      <div className="relative w-full h-5/6">
-        <Image
-          src={arrowBg}
-          alt="background arrows"
-          layout="fill"
-          objectFit="contain"
-          className=" -translate-y-28"
-        />
-        <div className="flex justify-around w-full translate-y-[300px]">
-          {supportContent.map((card, index) => (
-            <SupportCard
-              title={card.title}
-              key={index}
-              content={card.content}
-              supportClass={card.supportClass}
-            />
-          ))}
-        </div>
-      </div>
+      <Slider
+        sliderArray={supportArray}
+        sliderWidth={sliderWidth}
+        ImageClassName={ImageClassName}
+      />
     </div>
   )
 }
