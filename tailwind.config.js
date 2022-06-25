@@ -5,9 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // cursor: {
-      //   fancy: 'url(viewFinder), pointer',
-      // },
+      fontFamily: {
+        'press-start': ['Press Start 2P'],
+        'bebas-neue': ['Bebas Neue'],
+        'anton-font': ['Anton', 'sans-serif'],
+        'stick-no-bills': ['Stick No Bills', 'sans-serif'],
+      },
     },
   },
   plugins: [],

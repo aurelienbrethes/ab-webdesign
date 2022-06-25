@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import BackButton from '../src/components/BackButton'
+import BackButton from '../src/components/UI/BackButton'
 import Service from '../src/components/service'
 import H1Title from '../src/components/UI/H1Title'
 

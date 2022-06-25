@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import BackButton from '../src/components/BackButton'
+import BackButton from '../src/components/UI/BackButton'
 import Slider from '../src/components/Slider'
 import H1Title from '../src/components/UI/H1Title'
 import blocktech from '../public/assets/blocktech.png'

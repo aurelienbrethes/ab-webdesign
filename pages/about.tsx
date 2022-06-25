@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import AboutCard from '../src/components/AboutCard'
-import BackButton from '../src/components/BackButton'
+import BackButton from '../src/components/UI/BackButton'
 import H1Title from '../src/components/UI/H1Title'
 
 const aboutArray = [

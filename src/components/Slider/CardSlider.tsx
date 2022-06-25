@@ -2,6 +2,7 @@ import { ISliderItem } from '../../interfaces/Slider'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import router from 'next/router'
+import H2Title from '../UI/H2Title'
 
 interface IProps {
   cardItem: ISliderItem
@@ -22,7 +23,7 @@ const CardSlider = ({ cardItem, ImageClassName, sliderWidth }: IProps) => {
     <div
       className={`flex flex-col items-center justify-between h-full mx-20 ${sliderWidth}`}
     >
-      <h2>{cardItem.title}</h2>
+      <H2Title title={cardItem.title} />
       <div className={`${ImageClassName} relative`}>
         <Image
           src={cardItem.image}
@@ -33,7 +34,7 @@ const CardSlider = ({ cardItem, ImageClassName, sliderWidth }: IProps) => {
           onClick={() => cardItem.link && router.push(cardItem.link)}
         />
       </div>
-      <div className="flex justify-center w-screen py-5 bg-red-400 opacity-40">
+      <div className="flex items-center justify-center w-screen py-5 bg-red-500 h-1/4 bg-opacity-40">
         <p className="w-2/5 text-center">{cardItem.description}</p>
       </div>
     </div>
