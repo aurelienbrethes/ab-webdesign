@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { NextPage } from 'next'
 import BackButton from '../src/components/UI/BackButton'
-import Service from '../src/components/Service'
 import H1Title from '../src/components/UI/H1Title'
+import Service from '../src/components/Service'
 
 const services = [
   {
