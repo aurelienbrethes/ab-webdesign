@@ -52,18 +52,13 @@ const supportArray = [
 ]
 
 const ImageClassName = 'w-1/2 h-20'
-const sliderWidth = 'w-[400px]'
 
 const Support: NextPage = () => {
   return (
     <div className="z-40 flex items-center justify-center w-screen h-screen">
       <H1Title title="Accompagnement" />
       <BackButton />
-      <Slider
-        sliderArray={supportArray}
-        sliderWidth={sliderWidth}
-        ImageClassName={ImageClassName}
-      />
+      <Slider sliderArray={supportArray} ImageClassName={ImageClassName} />
     </div>
   )
 }

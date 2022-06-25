@@ -93,7 +93,7 @@ const HomePage = () => {
   }
 
   const variationsBullet = {
-    move: { y: posY - spaceShipHeight + 16 },
+    move: { y: posY - spaceShipHeight + 10 },
     start: { y: 20 },
   }
 
