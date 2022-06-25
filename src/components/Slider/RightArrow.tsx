@@ -20,7 +20,7 @@ const LeftArrow = ({ sliderArrayLength }: IProps) => {
   return (
     <button
       type="button"
-      className="relative w-20 h-40 duration-300 hover:translate-x-5"
+      className="relative flex justify-center w-1/12 h-10 ml-4 duration-300 sm:h-16 md:h-20 sm:hover:translate-x-3"
       onClick={() => handleChangeSlideAfter()}
     >
       <Image

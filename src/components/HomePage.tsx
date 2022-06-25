@@ -21,19 +21,19 @@ const titles = [
   },
   {
     label: 'Accompagnement',
-    height: 'translate-y-60',
+    height: 'translate-y-80',
     index: 2,
     path: '/support',
   },
   {
     label: 'A propos',
-    height: 'translate-y-80',
+    height: 'translate-y-20',
     index: 3,
     path: '/about',
   },
   {
     label: 'Voir des projets',
-    height: 'translate-y-20',
+    height: 'translate-y-60',
     index: 4,
     path: '/projects',
   },
@@ -109,7 +109,7 @@ const HomePage = () => {
         animate="show"
         className={`z-30 h-0 transition ${menuDelay}`}
       >
-        <div className="flex justify-center w-full mt-16 md:justify-around">
+        <div className="flex justify-center w-screen md:justify-around">
           {titles.map((title) => (
             <button
               type="button"

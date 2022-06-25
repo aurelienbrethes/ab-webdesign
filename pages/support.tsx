@@ -51,7 +51,7 @@ const supportArray = [
   },
 ]
 
-const ImageClassName = 'w-1/2 h-1/4'
+const ImageClassName = 'w-1/2 h-20'
 const sliderWidth = 'w-[400px]'
 
 const Support: NextPage = () => {

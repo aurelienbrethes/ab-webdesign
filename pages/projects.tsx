@@ -35,7 +35,7 @@ const sliderArray = [
   },
 ]
 
-const ImageClassName = 'w-full h-1/2'
+const ImageClassName = 'w-full h-32 sm:h-40 md:h-60'
 const sliderWidth = 'w-[600px]'
 
 const Projects: NextPage = () => {
