@@ -5,6 +5,7 @@ import H1Title from '../src/components/UI/H1Title'
 import blocktech from '../public/assets/blocktech.png'
 import portfolio from '../public/assets/portfolio.png'
 import blindCrashTest from '../public/assets/blindCrashTest.png'
+import droneMetashop from '../public/assets/droneMetashop.png'
 
 const sliderArray = [
   {
@@ -32,6 +33,15 @@ const sliderArray = [
     image: blindCrashTest,
     altImage: "l'application web Blind Crash Test",
     link: 'https://marie5060.github.io/Blind-Crash-Test/',
+  },
+  {
+    id: 4,
+    title: 'Drone Metashop',
+    description:
+      "Site e-commerce avec un seul produit développé au sein de l'entreprise Digital Copilote, paiement en crypto-monnaies",
+    image: droneMetashop,
+    altImage: "l'application web Blind Crash Test",
+    link: 'https://ninja-metashop-git-dev-digitalcopilote.vercel.app/',
   },
 ]
 
