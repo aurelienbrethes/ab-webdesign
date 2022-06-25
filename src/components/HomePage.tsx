@@ -60,11 +60,12 @@ const HomePage = () => {
 
   useEffect(() => {
     spaceShip && heightCalcul(spaceShip)
+    // Remove intro image to access footer
+    setTimeout(() => setIntroductionImage(false), 3000)
   }, [])
 
   const handleClickSpaceShip = (path: string) => {
     setShoot(true)
-    setIntroductionImage(false)
     setMenuDelay('delay-0 duration-500')
     setTimeout(() => {
       Router.push(path)
@@ -92,7 +93,7 @@ const HomePage = () => {
   }
 
   const variationsBullet = {
-    move: { y: posY - spaceShipHeight + 50 },
+    move: { y: posY - spaceShipHeight + 16 },
     start: { y: 20 },
   }
 
@@ -123,19 +124,19 @@ const HomePage = () => {
           ))}
         </div>
         <div
-          className="absolute bottom-0 left-0 flex items-end w-full h-28"
+          className="absolute left-0 flex items-end w-full h-16 bottom-16"
           ref={spaceShip}
         >
           <motion.div
             variants={variationsSpaceShip}
             animate={posX === 0 ? 'start' : 'move'}
-            className="absolute flex flex-col items-center w-10 h-40"
+            className="relative flex flex-col items-center w-10 h-16"
           >
             <motion.div
               variants={variationsBullet}
               transition={{ duration: 0.2 }}
               animate={shoot ? 'move' : 'start'}
-              className="absolute w-2"
+              className="relative w-2 "
             >
               <span className="absolute w-2 h-2 bg-white rounded-lg" />
             </motion.div>
@@ -145,7 +146,7 @@ const HomePage = () => {
               width={100}
               height={140}
               objectFit="cover"
-              className="absolute bottom-0 h-full"
+              className="absolute h-full"
             />
           </motion.div>
         </div>
@@ -156,13 +157,12 @@ const HomePage = () => {
           variants={variationsIntro}
           initial="show"
           animate="hidden"
-          className="w-screen h-screen transition duration-1000 ease-out delay-1000 bg-black"
+          className="z-0 w-screen h-screen transition duration-1000 ease-out delay-1000 bg-black"
         >
           <Image
             layout="fill"
             objectFit="contain"
             src={intro}
-            className="z-auto"
             alt="let's make a creative website"
           />
         </motion.div>
