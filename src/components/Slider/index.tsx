@@ -10,7 +10,6 @@ import router from 'next/router'
 interface IProps {
   sliderArray: ISliderItem[]
   ImageClassName: string
-  sliderWidth: string
 }
 
 const Slider = ({ sliderArray, ImageClassName }: IProps) => {

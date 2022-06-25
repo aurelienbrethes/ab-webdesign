@@ -9,7 +9,7 @@ interface IService {
   id: number
 }
 
-const Service = ({ title, description, id }: IService) => {
+const ServiceCard = ({ title, description, id }: IService) => {
   const { activeService, setActiveService } = useContext(AppContext)
   const openClass = 'w-60 sm:w-72 md:w-96'
   const closeClass = 'w-20'
@@ -73,4 +73,4 @@ const Service = ({ title, description, id }: IService) => {
   )
 }
 
-export default Service
+export default ServiceCard

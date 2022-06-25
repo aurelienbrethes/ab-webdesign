@@ -46,18 +46,13 @@ const sliderArray = [
 ]
 
 const ImageClassName = 'w-full h-32 sm:h-40 md:h-60'
-const sliderWidth = 'w-[600px]'
 
 const Projects: NextPage = () => {
   return (
     <div className="z-40 flex items-center justify-center w-screen h-screen">
       <H1Title title="Projets" />
       <BackButton />
-      <Slider
-        ImageClassName={ImageClassName}
-        sliderWidth={sliderWidth}
-        sliderArray={sliderArray}
-      />
+      <Slider ImageClassName={ImageClassName} sliderArray={sliderArray} />
     </div>
   )
 }

@@ -2,7 +2,7 @@
 import { NextPage } from 'next'
 import BackButton from '../src/components/UI/BackButton'
 import H1Title from '../src/components/UI/H1Title'
-import Service from '../src/components/Service'
+import ServiceCard from '../src/components/ServiceCard'
 
 const services = [
   {
@@ -42,7 +42,7 @@ const Services: NextPage = () => {
       </p>
       <section className="flex justify-around w-full pt-32 h-5/6">
         {services.map((service) => (
-          <Service
+          <ServiceCard
             title={service.title}
             description={service.description}
             id={service.id}
