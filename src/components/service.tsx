@@ -11,8 +11,9 @@ interface IService {
 
 const Service = ({ title, description, id }: IService) => {
   const { activeService, setActiveService } = useContext(AppContext)
-  const openClass = 'w-72'
+  const openClass = 'w-60 sm:w-72 md:w-96'
   const closeClass = 'w-20'
+  const closerClass = 'w-3 sm:w-20'
   const [titleClass, setTitleClass] = useState('mb-3')
   const [open, setOpen] = useState(false)
   const [activeClass, setActiveClass] = useState(closeClass)
@@ -23,7 +24,11 @@ const Service = ({ title, description, id }: IService) => {
       setTitleClass('')
       setOpen(true)
     } else {
-      setActiveClass(closeClass)
+      if (activeService) {
+        setActiveClass(closerClass)
+      } else {
+        setActiveClass(closeClass)
+      }
       setTitleClass('text-center w-3')
       setOpen(false)
     }
@@ -46,7 +51,7 @@ const Service = ({ title, description, id }: IService) => {
     <motion.div
       animate={{ y: 700 }}
       transition={{ ease: 'easeOut', duration: 0.3, delay: id * 0.1 }}
-      className={`flex -mt-[700px] relative flex-col h-5/6 justify-center items-center ${activeClass} bg-red-500 bg-opacity-40 duration-200 p-7`}
+      className={`flex -mt-[700px] relative flex-col h-5/6 justify-center items-center ${activeClass} bg-red-500 bg-opacity-40 duration-200 px-4 sm:px-6`}
     >
       <H2Title title={title} className={`${titleClass}`} />
       <motion.div
@@ -56,7 +61,7 @@ const Service = ({ title, description, id }: IService) => {
           duration: 0.5,
         }}
       >
-        {open && <p className="my-8 text-xs">{description}</p>}
+        {open && <p className="my-8 text-xs text-justify">{description}</p>}
       </motion.div>
       <span
         className="absolute inset-0 z-50 cursor-pointer"

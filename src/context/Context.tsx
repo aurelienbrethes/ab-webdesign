@@ -32,8 +32,6 @@ export const AppContextProvider: React.FC<Props> = ({ children }) => {
   const [menuDelay, setMenuDelay] = useState('delay-1000 duration-1000')
   const [activeService, setActiveService] = useState('')
 
-  console.log(activeService)
-
   return (
     <AppContext.Provider
       value={{
