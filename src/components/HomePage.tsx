@@ -32,7 +32,7 @@ const titles = [
     path: '/about',
   },
   {
-    label: 'Voir des projets',
+    label: 'Projets',
     height: 'translate-y-60',
     index: 4,
     path: '/projects',
@@ -109,16 +109,17 @@ const HomePage = () => {
         animate="show"
         className={`z-30 h-0 transition ${menuDelay}`}
       >
-        <div className="flex justify-center w-screen md:justify-around">
+        <div className="flex flex-col justify-center w-screen sm:flex-row md:justify-around">
           {titles.map((title) => (
-            <button
-              type="button"
-              key={title.index}
-              className={`z-50 ${title.height} md:static absolute text-xs cursor-pointer]`}
-              onClick={() => handleClickSpaceShip(title.path)}
-            >
-              {title.label}
-            </button>
+            <div key={title.index} className={`${title.height} w-full`}>
+              <button
+                type="button"
+                className={`z-50 py-2 animate-pulse sm:py-5 w-full px-3 sm:px-5 md:px-10 transition hover:bg-gradient-to-r from-red-500/0 ease-out via-red-500/50 to-red-500/0 hover:scale-105 duration-200 md:static absolute text-xs md:text-sm cursor-pointer]`}
+                onClick={() => handleClickSpaceShip(title.path)}
+              >
+                {title.label}
+              </button>
+            </div>
           ))}
         </div>
         <div

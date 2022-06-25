@@ -29,7 +29,7 @@ const Service = ({ title, description, id }: IService) => {
       } else {
         setActiveClass(closeClass)
       }
-      setTitleClass('text-center w-3')
+      setTitleClass('text-center w-3 animate-pulse')
       setOpen(false)
     }
   }, [activeService])
@@ -61,7 +61,9 @@ const Service = ({ title, description, id }: IService) => {
           duration: 0.5,
         }}
       >
-        {open && <p className="my-8 text-xs text-justify">{description}</p>}
+        {open && (
+          <p className="my-8 text-xs text-justify sm:text-sm">{description}</p>
+        )}
       </motion.div>
       <span
         className="absolute inset-0 z-50 cursor-pointer"

@@ -5,12 +5,12 @@ import H1Title from '../src/components/UI/H1Title'
 
 const aboutArray = [
   {
-    text: '  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the',
+    text: 'Après plusieurs expériences en tant que technicien en électronique puis technico-commercial, je décide en 2020 de me lancer dans le monde du web. En 2021, je suis une formation au sein de la wild code school de Biarritz afin de me reconvertir à 100% dans la création de site web et web mobile.',
     cardClass: '-ml-[700px] top-0 left-0',
     motionClass: 700,
   },
   {
-    text: '  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the',
+    text: "Aujourd'hui, après divers sites effectués durant ma formation et au sein de mon entreprise actuelle, je réponds à tout type de projets et serais heureux de vous guider à travers le choix de la solution la plus adaptée à votre besoin",
     cardClass: '-mr-[700px] bottom-0 right-0',
     motionClass: -700,
   },
