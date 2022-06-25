@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { NextPage } from 'next'
 import BackButton from '../src/components/UI/BackButton'
-import Service from '../src/components/service'
 import H1Title from '../src/components/UI/H1Title'
+import Service from '../src/components/Service'
 
 const services = [
   {
@@ -33,7 +33,7 @@ const services = [
 
 const Services: NextPage = () => {
   return (
-    <div className="relative flex items-center w-screen h-screen ">
+    <div className="relative flex items-center w-screen h-screen overflow-hidden ">
       <H1Title title="Services" />
       <p className="absolute p-3 text-xs italic sm:text-sm sm:p-10 top-20">
         Quelque soit votre style de projet, tous les sites proposés sont conçus
