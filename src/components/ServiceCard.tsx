@@ -62,7 +62,9 @@ const ServiceCard = ({ title, description, id }: IService) => {
         }}
       >
         {open && (
-          <p className="my-8 text-xs text-justify sm:text-sm">{description}</p>
+          <p className="my-3 text-xs text-justify sm:my-8 sm:text-sm">
+            {description}
+          </p>
         )}
       </motion.div>
       <span
