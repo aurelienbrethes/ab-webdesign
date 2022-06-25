@@ -29,8 +29,10 @@ const Body = ({ children }: IBody): JSX.Element => {
         className="translate-y-40"
         property="priority"
       />
-      <Footer />
-      {children}
+      <div className="flex justify-center max-w-8xl">
+        <Footer />
+        {children}
+      </div>
     </div>
   )
 }

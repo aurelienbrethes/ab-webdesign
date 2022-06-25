@@ -21,13 +21,13 @@ const titles = [
   },
   {
     label: 'Accompagnement',
-    height: 'translate-y-20',
+    height: 'translate-y-60',
     index: 2,
     path: '/support',
   },
   {
     label: 'A propos',
-    height: 'translate-y-72',
+    height: 'translate-y-80',
     index: 3,
     path: '/about',
   },
@@ -102,19 +102,19 @@ const HomePage = () => {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col w-full h-full">
       <motion.div
         variants={variationsIntro}
         initial="hidden"
         animate="show"
         className={`z-30 h-0 transition ${menuDelay}`}
       >
-        <div className="flex justify-around w-full mt-16">
+        <div className="flex justify-center w-full mt-16 md:justify-around">
           {titles.map((title) => (
             <button
               type="button"
               key={title.index}
-              className={`z-50 ${title.height} cursor-[url(https://ibb.co/PmStkTz), pointer]`}
+              className={`z-50 ${title.height} md:static absolute text-xs cursor-pointer]`}
               onClick={() => handleClickSpaceShip(title.path)}
             >
               {title.label}
@@ -122,7 +122,7 @@ const HomePage = () => {
           ))}
         </div>
         <div
-          className="absolute bottom-0 flex items-end w-full h-28"
+          className="absolute bottom-0 left-0 flex items-end w-full h-28"
           ref={spaceShip}
         >
           <motion.div

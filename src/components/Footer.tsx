@@ -1,12 +1,12 @@
 const Footer = () => {
   return (
-    <footer className="fixed flex justify-between w-screen h-auto px-8 bottom-4">
+    <footer className="fixed bottom-0 flex items-center justify-between w-full h-10 px-8">
       <div className="flex">
-        <p className="">0752668535</p>
-        <span className="mx-8 border-l" />
-        <p className="">ab.webdesign.64@gmail.com</p>
+        <p className="text-xs sm:text-sm">0752668535</p>
+        <span className="h-4 mx-2 border-l sm:h-5 md:mx-8" />
+        <p className="text-xs sm:text-sm">ab.webdesign.64@gmail.com</p>
       </div>
-      <p>Designed and coded by Aurélien Brethes</p>
+      <p className="hidden sm:block">Designed and coded by Aurélien Brethes</p>
     </footer>
   )
 }
