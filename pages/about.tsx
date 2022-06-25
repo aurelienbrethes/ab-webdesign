@@ -22,7 +22,7 @@ const About: NextPage = () => {
       <H1Title title="A propos" />
       <BackButton />
       <section className="w-full h-3/4">
-        <div className="relative w-full px-3 h-5/6">
+        <div className="relative w-full p-2 h-5/6">
           {aboutArray.map((card, index) => (
             <AboutCard
               text={card.text}
