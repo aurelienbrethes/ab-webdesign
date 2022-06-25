@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import BackButton from '../src/components/BackButton'
+import BackButton from '../src/components/UI/BackButton'
 import Slider from '../src/components/Slider'
 import H1Title from '../src/components/UI/H1Title'
 import blocktech from '../public/assets/blocktech.png'
@@ -35,7 +35,7 @@ const sliderArray = [
   },
 ]
 
-const ImageClassName = 'w-full h-1/2'
+const ImageClassName = 'w-full h-32 sm:h-40 md:h-60'
 const sliderWidth = 'w-[600px]'
 
 const Projects: NextPage = () => {

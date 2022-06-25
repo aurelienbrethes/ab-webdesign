@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import BackButton from '../src/components/BackButton'
+import BackButton from '../src/components/UI/BackButton'
 import Slider from '../src/components/Slider'
 import H1Title from '../src/components/UI/H1Title'
 import talk from '../public/assets/talk.svg'
@@ -51,7 +51,7 @@ const supportArray = [
   },
 ]
 
-const ImageClassName = 'w-1/2 h-1/4'
+const ImageClassName = 'w-1/2 h-20'
 const sliderWidth = 'w-[400px]'
 
 const Support: NextPage = () => {

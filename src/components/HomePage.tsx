@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Router from 'next/router'
-import { MutableRefObject, useEffect, useRef, useState } from 'react'
+import {
+  MutableRefObject,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import spaceShipImage from '../../public/assets/spaceShip.png'
 import intro from '../../public/assets/intro.gif'
+import AppContext from '../context/Context'
 
 const titles = [
   {
@@ -14,25 +21,27 @@ const titles = [
   },
   {
     label: 'Accompagnement',
-    height: 'translate-y-20',
+    height: 'translate-y-80',
     index: 2,
     path: '/support',
   },
   {
     label: 'A propos',
-    height: 'translate-y-72',
+    height: 'translate-y-20',
     index: 3,
     path: '/about',
   },
   {
     label: 'Voir des projets',
-    height: 'translate-y-20',
+    height: 'translate-y-60',
     index: 4,
     path: '/projects',
   },
 ]
 
 const HomePage = () => {
+  const { introductionImage, setIntroductionImage, menuDelay, setMenuDelay } =
+    useContext(AppContext)
   const [posX, setPosX] = useState(100)
   const [posY, setPosY] = useState(0)
   const [spaceShipHeight, setSpaceShipHeight] = useState(0)
@@ -55,6 +64,8 @@ const HomePage = () => {
 
   const handleClickSpaceShip = (path: string) => {
     setShoot(true)
+    setIntroductionImage(false)
+    setMenuDelay('delay-0 duration-500')
     setTimeout(() => {
       Router.push(path)
     }, 200)
@@ -91,19 +102,19 @@ const HomePage = () => {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col w-full h-full">
       <motion.div
         variants={variationsIntro}
         initial="hidden"
         animate="show"
-        className="z-30 h-0 transition duration-1000 delay-1000"
+        className={`z-30 h-0 transition ${menuDelay}`}
       >
-        <div className="flex justify-around w-full mt-16">
+        <div className="flex justify-center w-screen md:justify-around">
           {titles.map((title) => (
             <button
               type="button"
               key={title.index}
-              className={`z-50 ${title.height} cursor-[url(https://ibb.co/PmStkTz), pointer]`}
+              className={`z-50 ${title.height} md:static absolute text-xs cursor-pointer]`}
               onClick={() => handleClickSpaceShip(title.path)}
             >
               {title.label}
@@ -111,7 +122,7 @@ const HomePage = () => {
           ))}
         </div>
         <div
-          className="absolute bottom-0 flex items-end w-full h-28"
+          className="absolute bottom-0 left-0 flex items-end w-full h-28"
           ref={spaceShip}
         >
           <motion.div
@@ -138,20 +149,23 @@ const HomePage = () => {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div
-        variants={variationsIntro}
-        initial="show"
-        animate="hidden"
-        className="w-screen h-screen transition duration-1000 ease-out delay-1000 bg-black"
-      >
-        <Image
-          layout="fill"
-          objectFit="contain"
-          src={intro}
-          className="z-auto"
-          alt="let's make a creative website"
-        />
-      </motion.div>
+      {/* introduction image */}
+      {introductionImage && (
+        <motion.div
+          variants={variationsIntro}
+          initial="show"
+          animate="hidden"
+          className="w-screen h-screen transition duration-1000 ease-out delay-1000 bg-black"
+        >
+          <Image
+            layout="fill"
+            objectFit="contain"
+            src={intro}
+            className="z-auto"
+            alt="let's make a creative website"
+          />
+        </motion.div>
+      )}
     </div>
   )
 }
