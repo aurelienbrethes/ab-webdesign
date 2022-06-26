@@ -112,7 +112,14 @@ const HomePage = () => {
       >
         <div className="flex flex-col justify-center w-screen sm:flex-row md:justify-around">
           {titles.map((title) => (
-            <div key={title.index} className={`${title.height} w-full`}>
+            <motion.div
+              key={title.index}
+              variants={variationsIntro}
+              initial="hidden"
+              animate="show"
+              transition={{ delay: title.index * 0.6, duration: 2 }}
+              className={`${title.height} duration-200 w-full`}
+            >
               <button
                 type="button"
                 className={`z-50 py-2 animate-pulse sm:py-5 w-full px-3 sm:px-5 md:px-10 transition hover:bg-gradient-to-r from-red-500/0 ease-out via-red-500/50 to-red-500/0 hover:scale-105 duration-200 md:static absolute text-xs md:text-sm cursor-pointer]`}
@@ -120,7 +127,7 @@ const HomePage = () => {
               >
                 {title.label}
               </button>
-            </div>
+            </motion.div>
           ))}
         </div>
         <div
