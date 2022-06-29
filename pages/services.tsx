@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import BackButton from '../src/components/UI/BackButton'
 import H1Title from '../src/components/UI/H1Title'
 import ServiceCard from '../src/components/ServiceCard'
+import { NextSeo } from 'next-seo'
 
 const services = [
   {
@@ -33,25 +34,47 @@ const services = [
 
 const Services: NextPage = () => {
   return (
-    <div className="relative flex items-center w-screen h-screen overflow-hidden ">
-      <H1Title title="Services" />
-      <p className="absolute p-3 text-xs italic sm:text-sm sm:p-10 top-20">
-        Quelque soit votre style de projet, tous les sites proposés sont conçus
-        en format responsive, de façon à pouvoir être utilisés sur tout type
-        d'écrans
-      </p>
-      <section className="flex justify-around w-full pt-32 h-5/6">
-        {services.map((service) => (
-          <ServiceCard
-            title={service.title}
-            description={service.description}
-            id={service.id}
-            key={service.id}
-          />
-        ))}
-      </section>
-      <BackButton />
-    </div>
+    <>
+      <NextSeo
+        title="AB Web Design"
+        description="Services proposés par AB Web Design : site e-commerce, application web, site e-commerce, boutique en ligne wordpress, optimisation SEO"
+        canonical="https://www.abwebdesign64.fr/about"
+        openGraph={{
+          url: 'https://www.abwebdesign64.fr/about',
+          title: 'AB Web Design',
+          description:
+            'Services proposés par AB Web Design : site e-commerce, application web, site e-commerce, boutique en ligne wordpress, optimisation SEO',
+          images: [
+            {
+              url: 'https://i.ibb.co/Bz1KvH9/let-s-make-a-creative-website.png',
+              width: 300,
+              height: 200,
+              alt: 'logo AB web design',
+            },
+          ],
+          site_name: 'AB Web Design',
+        }}
+      />
+      <div className="relative flex items-center w-screen h-screen overflow-hidden ">
+        <H1Title title="Services" />
+        <p className="absolute p-3 text-xs italic sm:text-sm sm:p-10 top-20">
+          Quelque soit votre style de projet, tous les sites proposés sont
+          conçus en format responsive, de façon à pouvoir être utilisés sur tout
+          type d'écrans
+        </p>
+        <section className="flex justify-around w-full pt-32 h-5/6">
+          {services.map((service) => (
+            <ServiceCard
+              title={service.title}
+              description={service.description}
+              id={service.id}
+              key={service.id}
+            />
+          ))}
+        </section>
+        <BackButton />
+      </div>
+    </>
   )
 }
 export default Services

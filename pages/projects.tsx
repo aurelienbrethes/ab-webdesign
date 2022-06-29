@@ -6,6 +6,7 @@ import blocktech from '../public/assets/blocktech.png'
 import portfolio from '../public/assets/portfolio.png'
 import blindCrashTest from '../public/assets/blindCrashTest.png'
 import droneMetashop from '../public/assets/droneMetashop.png'
+import { NextSeo } from 'next-seo'
 
 const sliderArray = [
   {
@@ -49,11 +50,33 @@ const ImageClassName = 'w-full h-32 sm:h-40 md:h-60'
 
 const Projects: NextPage = () => {
   return (
-    <div className="z-40 flex items-center justify-center w-screen h-screen">
-      <H1Title title="Projets" />
-      <BackButton />
-      <Slider ImageClassName={ImageClassName} sliderArray={sliderArray} />
-    </div>
+    <>
+      <NextSeo
+        title="AB Web Design"
+        description="Exemples de projets portés par AB Web Design : e-commerce, wordpress, portfolio, application web"
+        canonical="https://www.abwebdesign64.fr/about"
+        openGraph={{
+          url: 'https://www.abwebdesign64.fr/about',
+          title: 'AB Web Design',
+          description:
+            'Exemples de projets portés par AB Web Design : e-commerce, wordpress, portfolio, application web',
+          images: [
+            {
+              url: 'https://i.ibb.co/Bz1KvH9/let-s-make-a-creative-website.png',
+              width: 300,
+              height: 200,
+              alt: 'logo AB web design',
+            },
+          ],
+          site_name: 'AB Web Design',
+        }}
+      />
+      <div className="z-40 flex items-center justify-center w-screen h-screen">
+        <H1Title title="Projets" />
+        <BackButton />
+        <Slider ImageClassName={ImageClassName} sliderArray={sliderArray} />
+      </div>
+    </>
   )
 }
 export default Projects

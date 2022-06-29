@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import { NextSeo } from 'next-seo'
 import AboutCard from '../src/components/AboutCard'
 import BackButton from '../src/components/UI/BackButton'
 import H1Title from '../src/components/UI/H1Title'
@@ -18,22 +19,43 @@ const aboutArray = [
 
 const About: NextPage = () => {
   return (
-    <div className="relative flex items-center w-screen h-screen overflow-hidden">
-      <H1Title title="A propos" />
-      <BackButton />
-      <section className="w-full h-3/4">
-        <div className="relative w-full p-2 mt-3 h-5/6">
-          {aboutArray.map((card, index) => (
-            <AboutCard
-              text={card.text}
-              cardClass={card.cardClass}
-              motionClass={card.motionClass}
-              key={index}
-            />
-          ))}
-        </div>
-      </section>
-    </div>
+    <>
+      <NextSeo
+        title="AB Web Design"
+        description="A propos de AB Web Design, parcours et compétences"
+        canonical="https://www.abwebdesign64.fr/about"
+        openGraph={{
+          url: 'https://www.abwebdesign64.fr/about',
+          title: 'AB Web Design',
+          description: 'A propos de AB Web Design, parcours et compétences',
+          images: [
+            {
+              url: 'https://i.ibb.co/Bz1KvH9/let-s-make-a-creative-website.png',
+              width: 300,
+              height: 200,
+              alt: 'logo AB web design',
+            },
+          ],
+          site_name: 'AB Web Design',
+        }}
+      />
+      <div className="relative flex items-center w-screen h-screen overflow-hidden">
+        <H1Title title="A propos" />
+        <BackButton />
+        <section className="w-full h-3/4">
+          <div className="relative w-full p-2 mt-3 h-5/6">
+            {aboutArray.map((card, index) => (
+              <AboutCard
+                text={card.text}
+                cardClass={card.cardClass}
+                motionClass={card.motionClass}
+                key={index}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+    </>
   )
 }
 export default About

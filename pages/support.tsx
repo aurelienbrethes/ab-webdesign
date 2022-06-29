@@ -7,6 +7,7 @@ import drawing from '../public/assets/drawing.svg'
 import development from '../public/assets/development.svg'
 import deploy from '../public/assets/deploy.svg'
 import monitoring from '../public/assets/monitoring.svg'
+import { NextSeo } from 'next-seo'
 
 const supportArray = [
   {
@@ -55,11 +56,33 @@ const ImageClassName = 'w-1/2 h-20'
 
 const Support: NextPage = () => {
   return (
-    <div className="z-40 flex items-center justify-center w-screen h-screen">
-      <H1Title title="Accompagnement" />
-      <BackButton />
-      <Slider sliderArray={supportArray} ImageClassName={ImageClassName} />
-    </div>
+    <>
+      <NextSeo
+        title="AB Web Design"
+        description="A propos de AB Web Design, parcours et compétences"
+        canonical="Détail de l'accompagnement proposé, de la création du projet jusqu'à son suivi après sa mise en ligne"
+        openGraph={{
+          url: 'https://www.abwebdesign64.fr/about',
+          title: 'AB Web Design',
+          description:
+            "Détail de l'accompagnement proposé, de la création du projet jusqu'à son suivi après sa mise en ligne",
+          images: [
+            {
+              url: 'https://i.ibb.co/Bz1KvH9/let-s-make-a-creative-website.png',
+              width: 300,
+              height: 200,
+              alt: 'logo AB web design',
+            },
+          ],
+          site_name: 'AB Web Design',
+        }}
+      />
+      <div className="z-40 flex items-center justify-center w-screen h-screen">
+        <H1Title title="Accompagnement" />
+        <BackButton />
+        <Slider sliderArray={supportArray} ImageClassName={ImageClassName} />
+      </div>
+    </>
   )
 }
 export default Support
