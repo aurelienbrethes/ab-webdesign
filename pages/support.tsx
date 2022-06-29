@@ -59,10 +59,10 @@ const Support: NextPage = () => {
     <>
       <NextSeo
         title="AB Web Design"
-        description="A propos de AB Web Design, parcours et compétences"
-        canonical="Détail de l'accompagnement proposé, de la création du projet jusqu'à son suivi après sa mise en ligne"
+        description="Détail de l'accompagnement proposé, de la création du projet jusqu'à son suivi après sa mise en ligne"
+        canonical="https://www.abwebdesign64.fr/support"
         openGraph={{
-          url: 'https://www.abwebdesign64.fr/about',
+          url: 'https://www.abwebdesign64.fr/support',
           title: 'AB Web Design',
           description:
             "Détail de l'accompagnement proposé, de la création du projet jusqu'à son suivi après sa mise en ligne",

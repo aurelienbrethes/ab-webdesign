@@ -54,9 +54,9 @@ const Projects: NextPage = () => {
       <NextSeo
         title="AB Web Design"
         description="Exemples de projets portés par AB Web Design : e-commerce, wordpress, portfolio, application web"
-        canonical="https://www.abwebdesign64.fr/about"
+        canonical="https://www.abwebdesign64.fr/projects"
         openGraph={{
-          url: 'https://www.abwebdesign64.fr/about',
+          url: 'https://www.abwebdesign64.fr/projects',
           title: 'AB Web Design',
           description:
             'Exemples de projets portés par AB Web Design : e-commerce, wordpress, portfolio, application web',

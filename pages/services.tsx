@@ -38,9 +38,9 @@ const Services: NextPage = () => {
       <NextSeo
         title="AB Web Design"
         description="Services proposés par AB Web Design : site e-commerce, application web, site e-commerce, boutique en ligne wordpress, optimisation SEO"
-        canonical="https://www.abwebdesign64.fr/about"
+        canonical="https://www.abwebdesign64.fr/services"
         openGraph={{
-          url: 'https://www.abwebdesign64.fr/about',
+          url: 'https://www.abwebdesign64.fr/services',
           title: 'AB Web Design',
           description:
             'Services proposés par AB Web Design : site e-commerce, application web, site e-commerce, boutique en ligne wordpress, optimisation SEO',
