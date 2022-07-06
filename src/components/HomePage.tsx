@@ -103,7 +103,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col w-full h-full overflow-hidden">
       <motion.div
         variants={variationsIntro}
         initial="hidden"
