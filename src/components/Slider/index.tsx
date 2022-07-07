@@ -26,7 +26,7 @@ const Slider = ({ sliderArray, ImageClassName }: IProps) => {
 
   return (
     <div className="z-0 flex flex-col items-center justify-center w-screen h-screen">
-      <H2Title title={cardItem.title} />
+      {sliderArray && <H2Title title={cardItem.title} />}
       {sliderArray && (
         <div className="flex items-center justify-around w-full md:justify-center">
           <LeftArrow sliderArrayLength={sliderArrayLength} />

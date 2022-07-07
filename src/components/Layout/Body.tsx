@@ -11,7 +11,7 @@ interface IBody {
 
 const Body = ({ children }: IBody): JSX.Element => {
   return (
-    <div className="relative flex justify-center w-screen h-screen bg-gradient-to-tl from-zinc-700 to-zinc-900">
+    <div className="relative flex justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-zinc-700 to-zinc-900">
       <Head>
         <title>AB Web Design</title>
         <meta name="AB Web Design" content="Let's make a creative website" />
