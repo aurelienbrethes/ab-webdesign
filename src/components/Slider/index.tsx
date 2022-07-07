@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
 import Image from 'next/image'
@@ -24,7 +25,7 @@ const Slider = ({ sliderArray, ImageClassName }: IProps) => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen">
+    <div className="z-0 flex flex-col items-center justify-center w-screen h-screen">
       <H2Title title={cardItem.title} />
       {sliderArray && (
         <div className="flex items-center justify-around w-full md:justify-center">
