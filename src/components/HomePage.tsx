@@ -131,7 +131,7 @@ const HomePage = () => {
           ))}
         </div>
         <div
-          className="absolute left-0 flex items-end w-full h-16 bottom-16"
+          className="absolute left-0 flex items-end w-screen h-16 bottom-16"
           ref={spaceShip}
         >
           <motion.div

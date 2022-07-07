@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 flex items-center justify-between w-full h-10 px-2 sm:px-8">
+    <footer className="fixed bottom-0 z-50 flex items-center justify-between w-full h-10 px-2 sm:px-8">
       <div className="flex items-center">
         <a className="z-50 p-2 text-xs sm:text-sm" href="tel:+330752668535">
           0752668535

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
 import Image from 'next/image'
@@ -5,7 +6,6 @@ import { ISliderItem } from '../../interfaces/Slider'
 import { useContext, useEffect, useState } from 'react'
 import AppContext from '../../context/Context'
 import H2Title from '../UI/H2Title'
-import router from 'next/router'
 
 interface IProps {
   sliderArray: ISliderItem[]
@@ -25,20 +25,21 @@ const Slider = ({ sliderArray, ImageClassName }: IProps) => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen">
-      <H2Title title={cardItem.title} />
+    <div className="z-0 flex flex-col items-center justify-center w-screen h-screen">
+      {sliderArray && <H2Title title={cardItem.title} />}
       {sliderArray && (
         <div className="flex items-center justify-around w-full md:justify-center">
           <LeftArrow sliderArrayLength={sliderArrayLength} />
           <div className={`${ImageClassName} w-2/3 relative my-8`}>
-            <Image
-              src={cardItem.image}
-              alt={cardItem.altImage}
-              layout="fill"
-              objectFit="contain"
-              className={`${hasLink} duration-200`}
-              onClick={() => cardItem.link && router.push(cardItem.link)}
-            />
+            <a href={cardItem.link} target="blank">
+              <Image
+                src={cardItem.image}
+                alt={cardItem.altImage}
+                layout="fill"
+                objectFit="contain"
+                className={`${hasLink} duration-200`}
+              />
+            </a>
           </div>
           <RightArrow sliderArrayLength={sliderArrayLength} />
         </div>

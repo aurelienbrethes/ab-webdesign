@@ -8,7 +8,7 @@ interface IProps {
   sliderArrayLength: number
 }
 
-const LeftArrow = ({ sliderArrayLength }: IProps) => {
+const RightArrow = ({ sliderArrayLength }: IProps) => {
   const { setSelectedSlide, selectedSlide } = useContext(AppContext)
   let indexSlider = 0
   indexSlider = sliderArrayLength
@@ -33,4 +33,4 @@ const LeftArrow = ({ sliderArrayLength }: IProps) => {
   )
 }
 
-export default LeftArrow
+export default RightArrow
