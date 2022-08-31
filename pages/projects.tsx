@@ -11,12 +11,12 @@ import { NextSeo } from 'next-seo'
 const sliderArray = [
   {
     id: 1,
-    title: 'Blocktech',
+    title: 'Metashop Merch',
     description:
       "Site e-commerce développé au sein de l'entreprise Digital Copilote afin d'acheter divers objets en crypto-monnaies",
     image: blocktech,
     altImage: 'Blocktech Logo',
-    link: 'https://ninja-lab-crypto-hightech.vercel.app/',
+    link: 'https://www.metamerchcrypto.xyz/',
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const sliderArray = [
     id: 3,
     title: 'Blind-Crash-Test',
     description:
-      'Application de Blind-Test développée en groupe lors de ma formation à la wil code school de Biarritz',
+      'Application de Blind-Test développée en groupe lors de ma formation à la wild code school de Biarritz (version ordinateur seulement)',
     image: blindCrashTest,
     altImage: "l'application web Blind Crash Test",
     link: 'https://marie5060.github.io/Blind-Crash-Test/',
@@ -71,11 +71,13 @@ const Projects: NextPage = () => {
           site_name: 'AB Web Design',
         }}
       />
-      <div className="z-40 flex items-center justify-center w-screen h-screen">
-        <H1Title title="Projets" />
-        <BackButton />
-        <Slider ImageClassName={ImageClassName} sliderArray={sliderArray} />
-      </div>
+      {sliderArray && (
+        <div className="z-40 flex items-center justify-center w-screen h-screen">
+          <H1Title title="Projets" />
+          <BackButton />
+          <Slider ImageClassName={ImageClassName} sliderArray={sliderArray} />
+        </div>
+      )}
     </>
   )
 }
