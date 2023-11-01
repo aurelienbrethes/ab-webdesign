@@ -2,24 +2,13 @@ import { NextPage } from 'next'
 import BackButton from '../src/components/UI/BackButton'
 import Slider from '../src/components/Slider'
 import H1Title from '../src/components/UI/H1Title'
-import blocktech from '../public/assets/blocktech.png'
 import portfolio from '../public/assets/portfolio.png'
+import yogaFlow from '../public/assets/yogaFlow.png'
 import blindCrashTest from '../public/assets/blindCrashTest.png'
-import droneMetashop from '../public/assets/droneMetashop.png'
 import { NextSeo } from 'next-seo'
 
 const sliderArray = [
   {
-    id: 1,
-    title: 'Metashop Merch',
-    description:
-      "Site e-commerce développé au sein de l'entreprise Digital Copilote afin d'acheter divers objets en crypto-monnaies",
-    image: blocktech,
-    altImage: 'Blocktech Logo',
-    link: 'https://www.metamerchcrypto.xyz/',
-  },
-  {
-    id: 2,
     title: 'Portfolio',
     description: 'Portfolio de présentation pour candidat ou auto-entrepreneur',
     image: portfolio,
@@ -27,7 +16,6 @@ const sliderArray = [
     link: 'https://aurelienbrethes.github.io/my_portfolio/',
   },
   {
-    id: 3,
     title: 'Blind-Crash-Test',
     description:
       'Application de Blind-Test développée en groupe lors de ma formation à la wild code school de Biarritz (version ordinateur seulement)',
@@ -36,13 +24,12 @@ const sliderArray = [
     link: 'https://marie5060.github.io/Blind-Crash-Test/',
   },
   {
-    id: 4,
-    title: 'Drone Metashop',
+    title: 'Yoga Flow Noemie',
     description:
-      "Site e-commerce avec un seul produit développé au sein de l'entreprise Digital Copilote, paiement en crypto-monnaies",
-    image: droneMetashop,
-    altImage: "l'application web Blind Crash Test",
-    link: 'https://ninja-metashop-git-dev-digitalcopilote.vercel.app/',
+      "Site vitrine d'une coach de Yoga, boosté pour le référencement naturel",
+    image: yogaFlow,
+    altImage: 'Site de coaching yoga dans les Landes',
+    link: 'https://yoga-flow-noemie.vercel.app/',
   },
 ]
 
